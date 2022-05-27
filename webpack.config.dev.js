@@ -65,6 +65,11 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+    }),
+
     new HtmlWebpackPlugin({
       title: "Gsap Starter",
       filename: "index.html",
